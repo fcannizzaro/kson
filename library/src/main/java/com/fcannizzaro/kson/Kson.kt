@@ -1,3 +1,4 @@
+import com.fcannizzaro.kson.get
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -16,10 +17,9 @@ fun checkType(value: Any?): Boolean {
             value is Map<*, *>
 }
 
-
 class KsonObject(private var json: JSONObject) {
 
-    fun entry(key: String, obtain: () -> Any?) {
+    private fun entry(key: String, obtain: () -> Any?) {
 
         var value = obtain()
 

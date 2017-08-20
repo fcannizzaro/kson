@@ -58,6 +58,25 @@ println(data.toString(4))
 }
 ```
 
+### \[ \] Operator
+
+```json
+{
+  "first": {
+    "second" : {
+      "key" : "value"
+    }
+  }
+}
+```
+
+You can access "**key**" by simply doing:
+
+```kotlin
+val obj : JSONObject = /* already built */
+val key = obj["first"]["second"]["key"] as String
+```
+
 ## Methods
 
 ### json(kson: KsonObject.() -> Unit)
