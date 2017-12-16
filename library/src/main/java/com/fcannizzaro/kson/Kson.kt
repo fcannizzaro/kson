@@ -10,6 +10,7 @@ fun checkType(value: Any?): Boolean {
     return value == null ||
             value is Int ||
             value is Double ||
+            value is Boolean ||
             value is Float ||
             value is String ||
             value is JSONArray ||
@@ -32,7 +33,7 @@ class KsonObject(private var json: JSONObject) {
         }
 
         if (!checkType(value)) {
-            throw IllegalArgumentException("Entry value can only be Int, Double, Float, String, JSONArray, JSONObject or Map.")
+            throw IllegalArgumentException("Entry value can only be Int, Double, Float, Boolean, String, JSONArray, JSONObject or Map.")
         }
 
         json.put(key, value)
