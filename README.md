@@ -21,7 +21,7 @@ allprojects {
 
 ```gradle
 dependencies {
-  compile 'com.github.fcannizzaro:kson:1.0.2'
+  compile 'com.github.fcannizzaro:kson:1.0.3'
 }
 ```
 
